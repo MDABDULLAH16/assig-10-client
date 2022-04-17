@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import Blog from './components/Blogs/Blog';
 import Cheekout from './components/Cheekout/Cheekout';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/cheekout' element={<Cheekout></Cheekout>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
