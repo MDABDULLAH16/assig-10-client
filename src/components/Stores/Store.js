@@ -10,7 +10,7 @@ const Store = () => {
             .then(data => setUsers(data))
     }, [])
     return (
-        <div>
+        <div className="grid md:grid-cols-3 sm:grid-cols-1 text-gray-800 font-semibold bg-white">
 
             {
                 users.map(user => <Cart
