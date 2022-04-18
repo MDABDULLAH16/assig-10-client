@@ -1,11 +1,19 @@
 
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Navigate, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 import useFirebase from '../../hooks/useFirebase';
 
 const SignInButton = () => {
-    const { handleGoogleSignIn } = useFirebase();
-    const { handleGitHubSignIn } = useFirebase();
+    const Navigate = useNavigate()
+
+    const { handleGoogleSignIn, user } = useFirebase();
+    const { handleGitHubSignIn, user1 } = useFirebase();
+    if (user || user1) {
+        Navigate('/cheekout')
+    }
 
 
 
