@@ -17,7 +17,7 @@ const Store = () => {
             <div className="grid md:grid-cols-3 sm:grid-cols-1 text-gray-800 font-semibold bg-white">
                 {
                     users.map(user => <Cart
-                        kay={user.id}
+                        key={user.id}
                         user={user}
 
                     ></Cart>)
