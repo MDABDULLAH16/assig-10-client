@@ -1,9 +1,11 @@
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 
 const googleProvider = new GoogleAuthProvider();
 const useFirebase = () => {
+    const navigate = useNavigate()
     const [user, setUser] = useState({});
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, googleProvider)
@@ -15,6 +17,9 @@ const useFirebase = () => {
             .catch(error => {
                 console.log(error.massage);
             })
+        if (user) {
+            navigate('/home')
+        };
 
     }
 

@@ -1,10 +1,11 @@
 import React from 'react';
-
+import myself from './images/myself.jpg'
 const About = () => {
     return (
-        <div>
-            <h1>this is about</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati expedita, eligendi atque voluptatem neque quisquam dolorem harum ipsam amet nemo ex veniam voluptatibus accusamus odio dignissimos natus unde facilis pariatur.</p>
+        <div className=' w-50 mx-auto bg-grey-200 ' >
+            <img className='h-screen h-25 w-25 mx-auto mt-3 rounded-lg ' src={myself} alt="" srcset="" />
+            <br />
+            <p>My next three month plan is to become a proffesional Web Developoer. I will try my best.I am hard working for this. I will never give up any setuation. this is my aim and i want to achive it any ways. when i start my jounry in to become a web Developoer i promise myself to became a Developoer. for this resion i working on in. Please pray for me!</p>
         </div>
     );
 };

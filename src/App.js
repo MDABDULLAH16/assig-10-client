@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-
+import RequerAuth from './components/RequerAuth/RequerAuth'
 import SignUp from './components/SignUp/SignUp';
 
 
@@ -21,14 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-
-        <Route path='/cheekout' element={
-
-
-          <Cheekout></Cheekout>
-
-
-        }></Route>
+        <Route path='/cheekout' element={<RequerAuth><Cheekout></Cheekout></RequerAuth>}></Route>
 
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/about' element={<About></About>}></Route>

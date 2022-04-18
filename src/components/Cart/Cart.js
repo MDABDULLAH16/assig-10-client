@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Cart = ({ user }) => {
@@ -14,7 +15,7 @@ const Cart = ({ user }) => {
                     <h2>Price:$ {price}</h2>
                     <p> Rating: {ratings}</p>
                     <div>
-                        <button className='border w-full bg-indigo-600 text-white rounded-md hover:bg-indigo-800 mt-3 font-semibold'>Booking</button>
+                        <Link to='/cheekout' ><button className='border w-full bg-indigo-600 text-white rounded-md hover:bg-indigo-800 mt-3 font-semibold'>Booking</button></Link>
                     </div>
                 </div>
             </div>
