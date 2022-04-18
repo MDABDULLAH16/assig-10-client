@@ -1,26 +1,14 @@
-import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+
 import React from 'react';
-import auth from '../../firebase.init';
+
 import useFirebase from '../../hooks/useFirebase';
 
 const SignInButton = () => {
     const { handleGoogleSignIn } = useFirebase();
+    const { handleGitHubSignIn } = useFirebase();
 
 
-    const githubProvider = new GithubAuthProvider();
 
-
-    const handleGitHubSignIn = () => {
-        signInWithPopup(auth, githubProvider)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-            })
-            .catch((error) => {
-                console.log(error.massage);
-            })
-
-    }
 
     return (
         <div>

@@ -10,7 +10,7 @@ const Store = () => {
             .then(data => setUsers(data))
     }, [])
     return (
-        <>
+        <div>
             <div className='bg-gray-200 pt-4 py-0'>
                 <span className='text-2xl font-bold'>Our Servises</span>
             </div>
@@ -23,7 +23,7 @@ const Store = () => {
                     ></Cart>)
                 }
             </div>
-        </>
+        </div>
     );
 };
 export default Store;
