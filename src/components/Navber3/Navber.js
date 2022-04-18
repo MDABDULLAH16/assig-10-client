@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import { signOut } from 'firebase/auth';
+import React, { } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 import CustomLink from '../CustomLink/CustomLink';
 
 const Navber = () => {
+    const [user] = useAuthState(auth);
+    const handleSignOut = () => {
+        signOut(auth);
+    }
 
     return (
         <nav className=' bg-indigo-700  font-semibold text-white   '>
@@ -14,7 +21,9 @@ const Navber = () => {
                 <CustomLink className=' m-4' to='/about' >About</CustomLink>
 
 
-                <CustomLink className=' m-4' to='/login' >Login</CustomLink>
+                {
+                    user ? <button onClick={handleSignOut} >SignOut</button> :
+                        <CustomLink className=' m-4' to='/login' >Login</CustomLink>}
 
 
             </div>
